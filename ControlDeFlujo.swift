@@ -39,3 +39,65 @@ let informalGreeting = "Hi \(nickName ?? fullName)"
 
 // Lo anterior dice: muestra el contenido de nickName o de lo contrario usa fullName
 
+// Algo más corto sería:
+
+if let nickName = nickName {
+    print("Hey, \(nickName)")
+}
+
+// switch
+let vegetable = "red pepper"
+switch vegetable {
+    case "celery":
+        print("Add some raisins and make ants on a log.")
+    case "cucumber", "watercress":
+        print("That would make a good tea sandwich.")
+    case let x where x.hasSuffix("pepper"):
+        print("Is it spacy \(x)?")
+    default:
+        print("Everything tastes good in soup.")
+}
+
+// NOTA: no hace falta romper cada branch con 'break'
+
+// FOR LOOP
+
+let interestingNumbers = [
+    "Prime": [2, 3, 5, 7, 11, 13],
+    "Fibonacci": [1, 1, 2, 3, 5, 8],
+    "Square": [1, 4, 9, 16, 25],
+]
+
+var largest = 0
+for (_, numbers) in interestingNumbers {
+    for number in numbers {
+        if number > largest {
+            largest = number
+        }
+    }
+}
+
+print(largest)
+
+// (_, numbers): el '_' descarta la variable, en este caso las keys del diccionario.
+
+// WHILE LOOP
+var n = 2
+while n < 100 {
+    n *= 2
+}
+print(n)
+
+var m = 2
+repeat {
+    m *= 2
+} while m < 100
+print(m)
+
+var total = 0
+for i in 0..<4 { // 0..<4 quiere decir de 0 hasta 4 excluído o lo mismo que 3. [0, 1, 2, 3]
+    total += 1
+}
+print(total)
+
+// NOTA: usamos NUMBER..<NUMBER para omitir excluir NUMBER y NUMBER...NUMBER para incluirlo.
