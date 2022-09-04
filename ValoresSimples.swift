@@ -49,3 +49,8 @@ print(occupations) // NOTA: occupations es de hecho un diccionario o array asoci
 // Agregar elementos a un array
 shoppingList.append("blue paint")
 print(shoppingList)
+
+// Crear un array vacío
+let emptyArray: [String] = []
+let emptyDictionary: [String : Float] = [:]
+
